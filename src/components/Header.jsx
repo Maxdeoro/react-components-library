@@ -1,5 +1,6 @@
 import '../index.css';
 import downloadButtonFile from '../utilites/dounloadButtonFile';
+import Button from './Button';
 
 function Header({showInstructions, toggleInstructions}){
   return (
