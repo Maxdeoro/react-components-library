@@ -1,7 +1,7 @@
 const downloadButtonFile = () => {
   const code = `
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import "./index.css";
 
 function Button({
@@ -24,12 +24,12 @@ return (
 }
 
 Button.propTypes = {
-children: PropTypes.node.isRequired,
-size: PropTypes.oneOf(["small", "medium", "large"]),
-variant: PropTypes.oneOf(["primary", "secondary", "danger", "outline", "gradient"]),
-isDisabled: PropTypes.bool,
-onClick: PropTypes.func,
-fullWidth: PropTypes.bool,
+children: propTypes.node.isRequired,
+size: propTypes.oneOf(["small", "medium", "large"]),
+variant: propTypes.oneOf(["primary", "secondary", "danger", "outline", "gradient"]),
+isDisabled: propTypes.bool,
+onClick: propTypes.func,
+fullWidth: propTypes.bool,
 };
 
 export default Button;

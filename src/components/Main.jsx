@@ -7,18 +7,12 @@ function Main(){
         <section className="component-group">
           <h2>Variants</h2>
           <div className="component-card">
-            {/* <Button variant='secondary' size='large'/>
-            <Button icon=':-)' isDisabled text='oupps!'/> */}
+            <Button ><span>:-((</span></Button>
             <Button variant='primary' text='primary' />
             <Button variant='secondaty' text='secondary' />
             <Button variant='danger' text='Danger' />
             <Button variant='gradient' text='gradient' />
             <Button variant='outline' text='Outline' />
-            {/* <button className="button primary">Primary</button> */}
-            {/* <button className="button secondary">Secondary</button> */}
-            {/* <button className="button danger">Danger</button> */}
-            {/* <button className="button gradient">Gradient</button> */}
-            {/* <button className="button outline">Outline</button> */}
           </div>
         </section>
 
