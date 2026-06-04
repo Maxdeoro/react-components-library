@@ -1,14 +1,14 @@
 import '../index.css';
 import Button from './Button';
 
-function Main(){
+function Main({handleClick}){
     return (
         <main className="component-showcase">
         <section className="component-group">
           <h2>Variants</h2>
           <div className="component-card">
             <Button ><span>:-((</span></Button>
-            <Button variant='primary' text='primary' />
+            <Button variant='primary' text='primary' onClick={handleClick}/>
             <Button variant='secondaty' text='secondary' />
             <Button variant='danger' text='Danger' />
             <Button variant='gradient' text='gradient' />
