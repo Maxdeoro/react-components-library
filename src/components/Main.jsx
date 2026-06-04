@@ -1,9 +1,10 @@
 import '../index.css';
 import Button from './Button';
+import Section from './Section';
 
-function Main({handleClick}){
+function Main({handleClick,children}){
     return (
-        <main className="component-showcase">
+      <main className="component-showcase">
         <section className="component-group">
           <h2>Variants</h2>
           <div className="component-card">
@@ -15,26 +16,12 @@ function Main({handleClick}){
             <Button variant='outline' text='Outline' />
           </div>
         </section>
-
-        <section className="component-group">
-          <h2>Sizes</h2>
-          <div className="component-card">
-            <Button variant='primary' size='small' text='Small' />
-            <Button variant='secondary' size='medium' text='Medium' />
-            <Button variant='danger' size='large' text='Large' />
-            {/* <button className="button small primary">Small</button> */}
-            {/* <button className="button medium primary">Medium</button> */}
-            {/* <button className="button large primary">Large</button> */}
-          </div>
-        </section>
-
+        {children}
         <section className="component-group">
           <h2>Button States</h2>
           <div className="component-card">
             <Button variant='primary' text='Default' />
             <Button variant='secondary' text='Disabled' isDisabled />
-            {/* <button className="button primary">Default</button>
-            <button className="button primary disabled">Disabled</button> */}
           </div>
         </section>
 
@@ -42,7 +29,6 @@ function Main({handleClick}){
           <h2>Full Width Button</h2>
           <div className="component-card">
             <Button variant='outline' text='Full width' fullWidth />
-            {/* <button className="button secondary full-width">Full Width</button> */}
           </div>
         </section>
       </main>
