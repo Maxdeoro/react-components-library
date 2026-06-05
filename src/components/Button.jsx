@@ -1,6 +1,6 @@
 import propTypes from 'prop-types';
 
-function Button({text='bla-bla',icon,size='medium',variant='primary',
+function Button({text,icon,size='medium',variant='primary',
     fullWidth=false,isDisabled=false,onClick,children}){
     return (
         <button className={`button ${variant} ${size} 
