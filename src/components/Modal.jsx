@@ -1,15 +1,6 @@
-import Button from './Button';
-import Modal from './Modal';
+function Modal({isModalOpen, setIsModalOpen}) {
 
-function Main({isModalOpen,setIsModalOpen}) {
-
-    return (
-    <>
-      <h1 className="title">Universal Modal Component</h1>
-      <Button isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
-      <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
-
-      {/* {isModalOpen && (
+        {isModalOpen && (
         <div className="overlay" onClick={() => setIsModalOpen(false)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <button className="closeButton" onClick={() => setIsModalOpen(false)}>
@@ -35,9 +26,7 @@ function Main({isModalOpen,setIsModalOpen}) {
             </div>
           </div>
         </div>
-      )} */}
-    </>
-    )
+      )}
 };
 
-export default Main;
+export default Modal;
