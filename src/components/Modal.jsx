@@ -1,17 +1,20 @@
-function Modal({isModalOpen, setIsModalOpen}) {
+import Button from './Button';
 
-        {isModalOpen && (
+function Modal({isModalOpen, setIsModalOpen,closeModal}) {
+      return (
         <div className="overlay" onClick={() => setIsModalOpen(false)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <button className="closeButton" onClick={() => setIsModalOpen(false)}>
+            <Button variant='closeButton'
+                    onClick={closeModal}
+            >
               &times;
-            </button>
+            </Button>
             <h2 className="modalHeader">Confirm Your Action</h2>
             <div className="modalBody">
               Are you sure you want to proceed? This action cannot be undone.
             </div>
             <div className="modalFooter">
-              <button onClick={() => setIsModalOpen(false)} className="secondaryButton">
+              <button onClick={closeModal} className="secondaryButton">
                 Cancel
               </button>
               <button
@@ -26,7 +29,8 @@ function Modal({isModalOpen, setIsModalOpen}) {
             </div>
           </div>
         </div>
-      )}
+      
+    )
 };
 
 export default Modal;

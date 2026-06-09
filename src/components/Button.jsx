@@ -1,7 +1,7 @@
-function Button({isModalOpen,setIsModalOpen}) {
+function Button({isModalOpen,setIsModalOpen,children,variant='button',onClick}) {
     return (
-      <button className="button" onClick={() => setIsModalOpen(true)}>
-        Open Modal
+      <button className={`${variant}`} onClick={onClick}>
+        {children}
       </button>
     );
 };
