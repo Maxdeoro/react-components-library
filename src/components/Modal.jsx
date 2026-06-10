@@ -1,31 +1,35 @@
 import Button from './Button';
 
-function Modal({isModalOpen, setIsModalOpen,closeModal}) {
+function Modal({isModalOpen, setIsModalOpen,closeModal,title,content,
+                showCancelButton=true,goTo}) {
       return (
-        <div className="overlay" onClick={() => setIsModalOpen(false)}>
+        <div className="overlay" onClick={closeModal}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <Button variant='closeButton'
                     onClick={closeModal}
             >
               &times;
             </Button>
-            <h2 className="modalHeader">Confirm Your Action</h2>
+            <h2 className="modalHeader">{title}</h2>
             <div className="modalBody">
-              Are you sure you want to proceed? This action cannot be undone.
+              {content}
             </div>
             <div className="modalFooter">
-              <button onClick={closeModal} className="secondaryButton">
+              {showCancelButton && <Button onClick={closeModal} 
+                                           variant="secondaryButton"
+                                    >
                 Cancel
-              </button>
-              <button
-                className="primaryButton"
+              </Button>}
+              <Button
+                variant="primaryButton"
                 onClick={() => {
                   alert("Ok");
-                  setIsModalOpen(false);
+                  goTo();
+                  closeModal();
                 }}
               >
                 Yes, Continue
-              </button>
+              </Button>
             </div>
           </div>
         </div>

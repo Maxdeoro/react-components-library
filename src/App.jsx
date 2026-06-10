@@ -85,9 +85,13 @@ function App() {
     setIsModalOpen((prev) => !prev);
   };
 
+  function goTo() {
+  location.replace("https://www.w3schools.com");
+  }
+
   return (
     <div className="app">
-      <Main isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal}/>
+      <Main isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} goTo={goTo}/>
     </div>
   );
 }

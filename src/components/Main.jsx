@@ -1,7 +1,7 @@
 import Button from './Button';
 import Modal from './Modal';
 
-function Main({isModalOpen,setIsModalOpen,onClick,openModal,closeModal}) {
+function Main({isModalOpen,setIsModalOpen,onClick,openModal,closeModal,goTo}) {
 
     return (
     <>
@@ -14,8 +14,9 @@ function Main({isModalOpen,setIsModalOpen,onClick,openModal,closeModal}) {
       </Button>
 
       {isModalOpen && (
-        <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} 
-               closeModal={closeModal}
+        <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} goTo={goTo} 
+               closeModal={closeModal} title='Confirm your action'
+               content='Are you sure you want to proceed? This action cannot be undone.'
         />
       )}
     </>
